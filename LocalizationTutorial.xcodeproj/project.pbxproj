@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07336D742B48FC5900997513 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 07336D732B48FC5900997513 /* Localizable.xcstrings */; };
+		07336D8F2B4920C000997513 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07336D912B4920C000997513 /* InfoPlist.strings */; };
 		07F1D9422B481E2B00AB26C5 /* LocalizationTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1D9412B481E2B00AB26C5 /* LocalizationTutorialApp.swift */; };
 		07F1D9442B481E2B00AB26C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1D9432B481E2B00AB26C5 /* ContentView.swift */; };
-		07F1D9462B481E2B00AB26C5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1D9452B481E2B00AB26C5 /* Item.swift */; };
 		07F1D9482B481E2C00AB26C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D9472B481E2C00AB26C5 /* Assets.xcassets */; };
 		07F1D94B2B481E2C00AB26C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D94A2B481E2C00AB26C5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07336D732B48FC5900997513 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		07336D902B4920C000997513 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07F1D93E2B481E2B00AB26C5 /* LocalizationTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1D9412B481E2B00AB26C5 /* LocalizationTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTutorialApp.swift; sourceTree = "<group>"; };
 		07F1D9432B481E2B00AB26C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		07F1D9452B481E2B00AB26C5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		07F1D9472B481E2C00AB26C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F1D94A2B481E2C00AB26C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +39,8 @@
 		07F1D9352B481E2B00AB26C5 = {
 			isa = PBXGroup;
 			children = (
+				07336D732B48FC5900997513 /* Localizable.xcstrings */,
+				07336D912B4920C000997513 /* InfoPlist.strings */,
 				07F1D9402B481E2B00AB26C5 /* LocalizationTutorial */,
 				07F1D93F2B481E2B00AB26C5 /* Products */,
 			);
@@ -55,7 +59,6 @@
 			children = (
 				07F1D9412B481E2B00AB26C5 /* LocalizationTutorialApp.swift */,
 				07F1D9432B481E2B00AB26C5 /* ContentView.swift */,
-				07F1D9452B481E2B00AB26C5 /* Item.swift */,
 				07F1D9472B481E2C00AB26C5 /* Assets.xcassets */,
 				07F1D9492B481E2C00AB26C5 /* Preview Content */,
 			);
@@ -112,6 +115,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 07F1D9352B481E2B00AB26C5;
 			productRefGroup = 07F1D93F2B481E2B00AB26C5 /* Products */;
@@ -129,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1D94B2B481E2C00AB26C5 /* Preview Assets.xcassets in Resources */,
+				07336D8F2B4920C000997513 /* InfoPlist.strings in Resources */,
 				07F1D9482B481E2C00AB26C5 /* Assets.xcassets in Resources */,
+				07336D742B48FC5900997513 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,12 +147,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1D9442B481E2B00AB26C5 /* ContentView.swift in Sources */,
-				07F1D9462B481E2B00AB26C5 /* Item.swift in Sources */,
 				07F1D9422B481E2B00AB26C5 /* LocalizationTutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07336D912B4920C000997513 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07336D902B4920C000997513 /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		07F1D94C2B481E2C00AB26C5 /* Debug */ = {
@@ -279,6 +295,9 @@
 				DEVELOPMENT_TEAM = YJF2RZ2K47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Tutorial;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Activity information will be collected to improve your app experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -308,6 +327,9 @@
 				DEVELOPMENT_TEAM = YJF2RZ2K47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Tutorial;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Activity information will be collected to improve your app experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  LocalizationTutorial
+
+  Created by Eric on 1/6/24.
+  
+*/
+"CFBundleDisplayName" = "튜토리얼";
+"NSUserTrackingUsageDescription" = "사용자의 앱 경험을 향상시키기 위해 활동 정보가 수집됩니다.";

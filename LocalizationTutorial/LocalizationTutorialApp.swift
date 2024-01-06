@@ -6,27 +6,31 @@
 //
 
 import SwiftUI
-import SwiftData
+import AppTrackingTransparency
 
 @main
 struct LocalizationTutorialApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        ATTrackingManager.requestTrackingAuthorization { status in
+                            switch status {
+                            case .authorized:
+                                print("Privacy - Tracking usage: authorized")
+                            case .denied:
+                                print("Privacy - Tracking usage: denied")
+                            case .notDetermined:
+                                print("Privacy - Tracking usage: notDetermined")
+                            case .restricted:
+                                print("Privacy - Tracking usage: restricted")
+                            @unknown default:
+                                print("Privacy - Tracking usage: default")
+                            }
+                        }
+                    }
+                }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
